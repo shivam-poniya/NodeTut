@@ -8,3 +8,12 @@
 1719337563507 : ::1 &{req.mentod} : /users/66799ff97f97625bc70dff6d
 1719337567971 : ::1 &{req.mentod} : /users/66799ff97f97625bc70dff6d
 1719337569760 : ::1 &{req.mentod} : /users/id:66799ff97f97625bc70dff6d
+1719416284582 : ::1 &{req.mentod} : /users/66799ff97f97625bc70dff6d
+1719416284805 : ::1 &{req.mentod} : /favicon.ico
+1719416534409 : ::ffff:192.168.1.33 &{req.mentod} : /
+1719416540560 : ::ffff:192.168.1.33 &{req.mentod} : /USERS
+1719416540975 : ::ffff:192.168.1.33 &{req.mentod} : /favicon.ico
+1719416551877 : ::ffff:192.168.1.33 &{req.mentod} : /USERS
+1719416750162 : ::ffff:192.168.1.33 &{req.mentod} : /USERS
+1719416750387 : ::ffff:192.168.1.33 &{req.mentod} : /favicon.ico
+1719416760227 : ::ffff:192.168.1.33 &{req.mentod} : /USERS/66799ff97f97625bc70dff6d
