@@ -1,9 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const connectToMongoDB= require('./connection')
+const path = require('path')
+
 const staticRoutes = require('./routes/staticRoutes')
 const urlRoutes = require('./routes/urlRoutes')
-const path = require('path')
+const userRoutes = require('./routes/userRoutes')
 
 const app = express();
 
@@ -20,6 +22,7 @@ app.use(express.urlencoded({extended : false}));
 //routes
 app.use('/api/linkly', urlRoutes)
 app.use('/', staticRoutes)
+app.use('/user', userRoutes)
 
 const PORT = process.env.PORT || 8000
 app.listen(PORT, () => console.log(`SERVER STARTED AT ${PORT}`));
