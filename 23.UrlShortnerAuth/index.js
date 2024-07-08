@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const connectToMongoDB= require('./connection')
 const path = require('path')
+const {restrictToLoggedinUserOnly, checkAuth} = require("./middlewares/auth")
+const cookieParser = require('cookie-parser')
 
 const staticRoutes = require('./routes/staticRoutes')
 const urlRoutes = require('./routes/urlRoutes')
@@ -19,9 +21,10 @@ connectToMongoDB(process.env.URL)
 
 app.use(express.json())
 app.use(express.urlencoded({extended : false}));
+app.use(cookieParser())
 //routes
-app.use('/api/linkly', urlRoutes)
-app.use('/', staticRoutes)
+app.use('/api/linkly', restrictToLoggedinUserOnly, urlRoutes)
+app.use('/', checkAuth, staticRoutes)
 app.use('/user', userRoutes)
 
 const PORT = process.env.PORT || 8000

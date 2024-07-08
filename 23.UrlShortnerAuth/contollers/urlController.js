@@ -11,7 +11,8 @@ const generateNewShortUrl = async (req, res) => {
     await UrlModel.create({
         shortId : shortUrl,
         redirectURL : body.url,
-        visitHistory:[]
+        visitHistory:[],
+        createdBy: req.user._id,
     });
     return res.render('index',{id : shortUrl})
     return res.json({id : shortUrl});
